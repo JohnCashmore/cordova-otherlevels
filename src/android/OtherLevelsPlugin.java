@@ -6,6 +6,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
+import com.otherlevels.android.sdk.OlAndroidLibrary;
 
 
 /**
@@ -15,6 +16,13 @@ public class OtherLevelsPlugin extends CordovaPlugin {
    
 
     private CallbackContext callbackContext;
+
+    @Override
+    public void initialize(CordovaInterface cordova, CordovaWebView webView) {
+
+    }
+
+
 
     @Override
     public boolean execute(String action, JSONArray args,
