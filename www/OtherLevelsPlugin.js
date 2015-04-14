@@ -4,23 +4,14 @@ function OtherLevelsPlugin() {
 
 // Make one off payment
 OtherLevelsPlugin.prototype.logEvent = function(
-        paymentAmount,
-        currency,
-        paymentRef,
-        consumerRef,
-        userReceipt,
         onSuccess,
         onFail) {
 
-    // cordova.exec(onSuccess, onFail, 'OtherLevelsPlugin', 'logEvent',
-    //         [
-    //             parseFloat(paymentAmount),
-    //             currency,
-    //             paymentRef,
-    //             consumerRef,
-    //             userReceipt
-    //         ]
-    //         );
+    cordova.exec(onSuccess, onFail, 'OtherLevelsPlugin', 'logEvent',
+            [
+                null
+            ]
+            );
 }
 
 cordova.addConstructor(function() {
